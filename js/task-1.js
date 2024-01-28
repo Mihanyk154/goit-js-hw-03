@@ -1,20 +1,21 @@
-function makeTransaction(quantity, pricePerDroid, customerCredits) {
-    const totalPrice = quantity * pricePerDroid;
-    if (totalPrice > customerCredits) {
-        return `Insufficient funds!`;
-    } else {
-        return `You ordered ${quantity} droids worth ${totalPrice} credits!`
-    }
-    
-}
-makeTransaction(5, 3000, 23000);
-makeTransaction(3, 1000, 15000);
-makeTransaction(10, 5000, 8000);
-makeTransaction(8, 2000, 10000);
-makeTransaction(10, 500, 5000);
+function slugify(title) {
+    const lowerTitle = title.toLowerCase();
+    const string = lowerTitle.split(" ");
 
-console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
-console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
-console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 5000 credits!"
+    return string.join("-");
+
+}
+slugify("Arrays for begginers");
+slugify("English for developer");
+slugify("Ten secrets of JavaScript");
+slugify("How to become a JUNIOR developer in TWO WEEKS");
+
+
+
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
+
+
+
