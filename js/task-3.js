@@ -1,19 +1,17 @@
 function filterArray(numbers, value) {
-    let neuElement = [];
-    for (let i = 0; i < numbers.length; i +=1) {
-        if (numbers[i] > value) {
-            
-        } 
-        return neuElement.push(numbers[i]);
-
-        
-
+    const resultArray = [];
+    for (let i = 0; i < numbers.length; i++) {
+        const number = numbers[i];
+        if (number > value) {
+            resultArray.push(number);
+        }
     }
-    
+    return resultArray;
 }
+
 filterArray([1, 2, 3, 4, 5], 3);
 filterArray([1, 2, 3, 4, 5], 4);
-filterArray([1, 2, 3, 4, 5], 5);  
+filterArray([1, 2, 3, 4, 5], 5);
 filterArray([12, 24, 8, 41, 76], 38);
 filterArray([12, 24, 8, 41, 76], 20);
 
